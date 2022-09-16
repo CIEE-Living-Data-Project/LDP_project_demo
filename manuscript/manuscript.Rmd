@@ -1,0 +1,83 @@
+---
+title: Manuscript
+author:
+  - name: Brendan Casey
+    email: bgcasey@ualberta.ca
+    affiliation: University of Alberta
+    correspondingauthor: true
+    footnote: 1
+  - name: Second Author
+    email: second@example.com
+    affiliation: Another University
+address:
+  - code: Some Institute of Technology
+    address: Department, Street, City, State, Zip
+  - code: Another University
+    address: Department, Street, City, State, Zip
+footnote:
+  - code: 1
+    text: "This is the first author footnote."
+  - code: 2
+    text: "Another author footnote."
+abstract: |
+  This is the abstract.
+  It consists of two paragraphs.
+keywords: 
+  - keyword1
+  - keyword2
+journal: "An awesome journal"
+date: "`r Sys.Date()`"
+classoption: preprint, 3p, authoryear
+bibliography: library.bib
+linenumbers: false
+numbersections: true
+csl: https://www.zotero.org/styles/elsevier-harvard
+output: 
+  rticles::elsevier_article:
+    keep_tex: true
+    citation_package: natbib
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+Here are two sample references:
+[@defrenneGlobalBufferingTemperatures2019;
+@suggittExtinctionRiskClimate2018].
+
+# Methods
+
+# Results
+
+# Discussion
+
+# Conclusion
+
+# References
+
+# Tables
+
+Table \ref{tab1} is an example of a table.
+
+```{r tab1, echo = TRUE}
+knitr::kable(head(mtcars)[,1:4], 
+    caption = "\\label{tab1}Caption centered above table"
+)
+```
+
+
+# Figures
+
+Figure \ref{fig2} is generated using an R chunk.
+
+```{r fig2, fig.width = 5, fig.height = 5, fig.align='center', out.width="50%", fig.cap = "\\label{fig2}A meaningless scatterplot.", echo = FALSE}
+plot(runif(25), runif(25))
+```
+
+
+
+# Appendices
+
+# References {.unnumbered}
