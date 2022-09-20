@@ -46,7 +46,7 @@ editor_options:
 Here are two sample references:
 [@defrenneGlobalBufferingTemperatures2019;
 @suggittExtinctionRiskClimate2018].
-
+ 
 # Methods 
 
 # Results
