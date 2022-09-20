@@ -47,7 +47,7 @@ Here are two sample references:
 [@defrenneGlobalBufferingTemperatures2019;
 @suggittExtinctionRiskClimate2018].
 
-# Methods
+# Methods 
 
 # Results
 
