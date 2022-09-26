@@ -13,7 +13,7 @@ library(palmerpenguins)
 # see what's in the data
 head(penguins)
 
-# Penguin mass vs flipper length
+# Scatterplot of penguin mass vs flipper length
 ggplot2::theme_set(ggplot2::theme_minimal())
 
 mass_flipper <- ggplot(data = penguins, 
@@ -36,3 +36,13 @@ mass_flipper <- ggplot(data = penguins,
         plot.caption.position = "plot")
 
 mass_flipper
+
+
+# Scatterplot of penguin bill length versus bill depth
+bill_length_depth<-ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 2)  +
+  scale_color_manual(values = c("darkorange","darkorchid","cyan4"))
+
+bill_length_depth
